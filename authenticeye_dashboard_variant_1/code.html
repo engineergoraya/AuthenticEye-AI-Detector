@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuthenticEye Dashboard - AI Content Detector</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00E5FF", // Neon Blue accent
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0B0F1A",
+                        "card-dark": "rgba(17, 24, 39, 0.7)",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.15) 0%, rgba(11, 15, 26, 0) 70%);
+        }.toggle-checkbox:checked {
+            right: 0;
+            background-color: #00E5FF;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 min-h-screen pb-20 overflow-x-hidden">
+<div class="fixed inset-0 pointer-events-none gradient-bg"></div>
+<header class="sticky top-0 z-50 px-5 py-4 flex items-center justify-between glass mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center neon-glow">
+<span class="material-icons-round text-background-dark text-xl">remove_red_eye</span>
+</div>
+<span class="font-display font-bold text-xl tracking-tight">Authentic<span class="text-primary">Eye</span></span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400">
+<span class="material-icons-round">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/30 p-0.5 overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVuNk6bVzk-0EtJ9Wr7T56Hox1sZJx6wXuCIXXEyePp3yD1ucaqVy4XdZ33xGIERDU8J_BJU_hTMjbPY3e4DcGpgufyLkjZy8eNjxJn-maT7jWBWj__cxbptvDVPcoMeHRlPGBC1gbzwTKZ8fv87vWap2-958f8mcOAc5XxWxM3kB7pUjL6MyrLjWNgRGmgNUoBKGIeMUubOWm-n3zrjFK7vJdNBTI7OSBixVq8eWiY_jqI3JJk4Fu5Mq4UzPGlhQxJcBv9swvtb8"/>
+</div>
+</div>
+</header>
+<main class="relative px-5 max-w-lg mx-auto">
+<div class="mb-8">
+<h1 class="text-2xl font-display font-bold mb-1">Analyze Content</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Verify the authenticity of any digital asset.</p>
+</div>
+<div class="mb-6">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-icons-round text-slate-400 group-focus-within:text-primary transition-colors">link</span>
+</div>
+<input class="block w-full pl-11 pr-24 py-4 glass rounded-2xl border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-sm transition-all bg-white/5 dark:bg-black/20" placeholder="Paste website or document URL..." type="text"/>
+<div class="absolute inset-y-0 right-2 flex items-center">
+<button class="bg-primary text-background-dark font-bold text-xs px-4 py-2 rounded-xl neon-glow active:scale-95 transition-all">
+                        FETCH
+                    </button>
+</div>
+</div>
+</div>
+<div class="glass rounded-2xl p-4 mb-6 flex items-center justify-between border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-icons-round text-primary/80">bolt</span>
+<div>
+<p class="text-sm font-semibold">Scanning Engine</p>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">Deep forensic for max accuracy</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">Fast</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">Deep</span>
+</div>
+</div>
+<div class="relative group mb-8">
+<div class="absolute inset-0 bg-primary/5 rounded-3xl blur-xl group-hover:bg-primary/10 transition-all"></div>
+<div class="relative glass border-2 border-dashed border-white/10 group-hover:border-primary/50 transition-all rounded-3xl p-10 flex flex-col items-center justify-center text-center cursor-pointer">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-icons-round text-primary text-4xl">cloud_upload</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Upload Files</h3>
+<p class="text-sm text-slate-400 mb-6 px-4">Drag and drop PDFs, images, or documents here to begin analysis</p>
+<div class="flex gap-2">
+<span class="text-[10px] px-2 py-1 bg-white/5 rounded border border-white/10 text-slate-400">PDF</span>
+<span class="text-[10px] px-2 py-1 bg-white/5 rounded border border-white/10 text-slate-400">DOCX</span>
+<span class="text-[10px] px-2 py-1 bg-white/5 rounded border border-white/10 text-slate-400">JPG</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-slate-500">Recent Scans</h4>
+<button class="text-primary text-xs font-semibold">View All</button>
+</div>
+<div class="space-y-3">
+<div class="glass p-3 rounded-xl flex items-center gap-4 border-white/5">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+<span class="material-icons-round">verified</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold truncate">marketing_deck_v2.pdf</p>
+<p class="text-[11px] text-slate-500">98% Authentic • 2m ago</p>
+</div>
+<span class="material-icons-round text-slate-500 text-sm">chevron_right</span>
+</div>
+<div class="glass p-3 rounded-xl flex items-center gap-4 border-white/5">
+<div class="w-10 h-10 rounded-lg bg-rose-500/20 flex items-center justify-center text-rose-400">
+<span class="material-icons-round">gpp_maybe</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold truncate">blog_post_draft.txt</p>
+<p class="text-[11px] text-slate-500">12% Authentic • 1h ago</p>
+</div>
+<span class="material-icons-round text-slate-500 text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 h-20 glass border-t border-white/10 flex items-center justify-around px-6 z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">dashboard</span>
+<span class="text-[10px] font-medium">Scan</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary text-background-dark rounded-full shadow-lg flex items-center justify-center neon-glow ring-4 ring-background-dark">
+<span class="material-icons-round text-3xl">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">bar_chart</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full z-[60]"></div>
+
+</body></html>

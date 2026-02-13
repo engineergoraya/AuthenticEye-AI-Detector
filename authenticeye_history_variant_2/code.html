@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuthenticEye - Verification History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00E5FF", // Neon Cyan/Blue
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0B0E14",
+                        "surface-dark": "rgba(23, 27, 34, 0.7)",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-morphism {
+            background: rgba(23, 27, 34, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans min-h-screen pb-24">
+<header class="sticky top-0 z-50 px-6 py-4 flex items-center justify-between glass-morphism border-b border-glass-border">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center neon-glow">
+<span class="material-icons-round text-background-dark text-xl">visibility</span>
+</div>
+<h1 class="font-display text-xl font-bold tracking-tight">AuthenticEye</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-200 dark:bg-slate-800 transition-colors">
+<span class="material-icons-round text-slate-600 dark:text-slate-400">notifications</span>
+</button>
+</header>
+<main class="p-6 space-y-6">
+<div class="flex gap-3">
+<div class="relative flex-1">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-lg">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-glass-border rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search history..." type="text"/>
+</div>
+<button class="px-4 py-2.5 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-glass-border rounded-xl flex items-center justify-center">
+<span class="material-icons-round text-slate-500">tune</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-lg font-bold font-display">Recent Verifications</h2>
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">32 Total</span>
+</div>
+<div class="glass-morphism rounded-2xl overflow-hidden transition-transform active:scale-[0.98]">
+<div class="p-4 flex gap-4">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-800 shrink-0">
+<img alt="Abstract AI artwork" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ-Da3DVthjb_v20O143wHIAWN1Nmrxl24HSb9AYSxmTsIU33dJzqmOFsl73wIsj-MQ_WpuYx1BlsaSyW0IfAX-MdRAHxMBJ2AvL-uEzVGtxHY0qXspCppERpzaHvujId9z12lcpRpF2xBE7mAqlQi0HyImojVRK_JEVuhwSz1EaXps3GuYbNaaMiUhTl5Vw8nWw6tmHl9QzxotA2natTT4WV8GojjKlepeKQwnoNlpcpHOaRE9KlTH9QLQDTtQilYNTg3pXI1Vf2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-semibold text-sm truncate w-40">Synthetic_Cityscape_01.jpg</h3>
+<span class="material-icons-round text-slate-500 text-lg">more_horiz</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
+<span>12 MB</span>
+<span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+<span>2 mins ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-500 border border-red-500/20">
+                                AI Generated
+                            </span>
+<span class="text-sm font-bold text-red-500">98.4%</span>
+</div>
+</div>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-red-500" style="width: 98.4%"></div>
+</div>
+</div>
+<div class="glass-morphism rounded-2xl overflow-hidden transition-transform active:scale-[0.98]">
+<div class="p-4 flex gap-4">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-800 shrink-0">
+<img alt="Natural street photography" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbAJyCuJ9VCkgiuv9jR7363P9lTznniEQpQ8HUoXNqfpPgz1-IYRldY1sjN0nuT3aMRO5lLuXedGfAei8CdEK8QKMDwNF993FP7TMtByRJJwJCrqTDdmeL3726OS-9d-MY3Qp92AZyHpOdlWS4-VoyErizaFYuSGovVdu145QBlqoQ_GHtwFczSsQ9GPdq6QpbPpSj1L2tEHpT0UpsUNxOBLZwU_xQB4FVE1UZRx7d4la3RavsP43fsQVYtYNCA2qNa6UzMPjDFd6l"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-semibold text-sm truncate w-40">Street_Photography_Raw.png</h3>
+<span class="material-icons-round text-slate-500 text-lg">more_horiz</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
+<span>4.2 MB</span>
+<span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+<span>1 hour ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                                Authentic
+                            </span>
+<span class="text-sm font-bold text-emerald-500">1.2% AI</span>
+</div>
+</div>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-emerald-500" style="width: 1.2%"></div>
+</div>
+</div>
+<div class="glass-morphism rounded-2xl overflow-hidden transition-transform active:scale-[0.98]">
+<div class="p-4 flex gap-4">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-800 shrink-0">
+<img alt="Technology desk setup" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyB2EzgAcIcEgkwrjpZ6JmclCFNmBG7cJHHSdcak4FVDUs2V2cQ8y4VzLvmhr5lKFKmkhrDDnH6RI0iCOSl_ah5Efr8wPcu5kRNLqK1FBbNyArzEaeUUOD9nAcdY42Py8_9Eloqt8kUJ-C5i313q5xHXH8584dtHANcQky-9R8ZutLwzta4NwlY6pAumgYArJaWvT01mZhu8pMs1ii2c-y6bK3fzQRty8Q4Bg4hI3z2dPefbFkxQiZZlSF1J8ldvR7ZWfPZk6Lckx5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-semibold text-sm truncate w-40">Desk_Setup_Final_Edit.heic</h3>
+<span class="material-icons-round text-slate-500 text-lg">more_horiz</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
+<span>8.7 MB</span>
+<span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+<span>Yesterday</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                                Partial AI
+                            </span>
+<span class="text-sm font-bold text-amber-500">45.0%</span>
+</div>
+</div>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-amber-500" style="width: 45%"></div>
+</div>
+</div>
+<div class="glass-morphism rounded-2xl overflow-hidden transition-transform active:scale-[0.98]">
+<div class="p-4 flex gap-4">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-800 shrink-0">
+<img alt="Neon abstract gradient" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF_w2o9o9lKeV4MlqaPI_gxWCLSqfVN2PVw3N70znDLQs85XQUfDyts8OA_BRTm1Mzv2Cy1w2CSVVW9bHuaJE6sP3PVQPxWrs0PUj1X0DVpReZq0FxFU6UxaAnEciDHrB7k7Vl12EvqbFnYKNPd1eW1wJomyQFbLMbycuTGq_HUOD6QmroXrmyPqcAuj5K5ZihPjQBF_e1mY2a5X-MSKGmcg3rJ4fx9KST3GELmDpTh1MmbbRV15NQ4MD-mF3iaA6BE9krdqDkhljo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-semibold text-sm truncate w-40">Portrait_Generation_04.jpg</h3>
+<span class="material-icons-round text-slate-500 text-lg">more_horiz</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-slate-400 font-medium">
+<span>15.1 MB</span>
+<span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+<span>Oct 24, 2023</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-500 border border-red-500/20">
+                                AI Generated
+                            </span>
+<span class="text-sm font-bold text-red-500">99.9%</span>
+</div>
+</div>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-red-500" style="width: 99.9%"></div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl glass-morphism text-slate-400 font-medium text-sm flex items-center justify-center gap-2 border-dashed border-2">
+<span>View Older Results</span>
+<span class="material-icons-round text-sm">keyboard_arrow_down</span>
+</button>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 glass-morphism border-t border-glass-border px-6 py-4 flex items-center justify-between rounded-t-3xl shadow-2xl">
+<button class="flex flex-col items-center gap-1 text-slate-500 transition-colors">
+<span class="material-icons-round">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary transition-colors">
+<span class="material-icons-round">history</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">History</span>
+</button>
+<div class="relative -top-8">
+<button class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-background-dark shadow-[0_0_20px_rgba(0,229,255,0.4)] neon-glow transform transition-transform active:scale-90 rotate-45">
+<span class="material-icons-round text-3xl -rotate-45">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-slate-500 transition-colors">
+<span class="material-icons-round">insights</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 transition-colors">
+<span class="material-icons-round">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+<div class="fixed top-[-10%] left-[-10%] w-[40%] h-[30%] bg-primary/10 blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-blue-600/10 blur-[100px] -z-10 pointer-events-none"></div>
+
+</body></html>
