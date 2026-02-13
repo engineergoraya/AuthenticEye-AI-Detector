@@ -14,7 +14,10 @@ AuthenticEye is a forensic tool that helps users verify if a website or media is
 - **Database:** Firebase
 
 ## 📸 Screenshots
-(Upload screenshots of your Dashboard and Results page here)
+![Dashboard Screenshot](dashboard.png)
+![Results Page](detection.png)
+![Results Page](forensics.png)
+
 
 ## 📦 Installation
 
